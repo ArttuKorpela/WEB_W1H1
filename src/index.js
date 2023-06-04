@@ -16,6 +16,16 @@ function initializeCode() {
 
   firstButton.addEventListener("click", function () {
     console.log("Hello World!");
-    title.innerText = "My notebook";
+    title.innerText = "My notebook"; 
   });
+  
+  const addButton = document.getElementById("add-data");
+  const dataList = document.getElementById("data-list");
+  
+  addButton.addEventListener("click",function() {
+    const li = document.createElement("li");
+    li.textContent = "Arbitrary text";
+    
+    dataList.appendChild(li);
+  })
 }
