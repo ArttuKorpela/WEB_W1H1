@@ -194,9 +194,10 @@ function initializeCode() {
   });
   var addButton = document.getElementById("add-data");
   var dataList = document.getElementById("data-list");
+  var data = document.getElementById("text-area");
   addButton.addEventListener("click", function () {
     var li = document.createElement("li");
-    li.textContent = "Arbitrary text";
+    li.textContent = data.value;
     dataList.appendChild(li);
   });
 }

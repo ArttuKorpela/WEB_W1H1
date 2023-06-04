@@ -21,10 +21,11 @@ function initializeCode() {
   
   const addButton = document.getElementById("add-data");
   const dataList = document.getElementById("data-list");
-  
+  const data = document.getElementById("text-area");
+
   addButton.addEventListener("click",function() {
     const li = document.createElement("li");
-    li.textContent = "Arbitrary text";
+    li.textContent = data.value;
     
     dataList.appendChild(li);
   })
