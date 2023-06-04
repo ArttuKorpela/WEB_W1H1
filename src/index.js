@@ -1,10 +1,21 @@
 import "./styles.css";
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+if (document.readyState !== "loading") {
+  console.log("document is ready");
+  initializeCode();
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Document is ready soon.");
+    initializeCode();
+  });
+}
+
+function initializeCode() {
+  const firstButton = document.getElementById("my-button");
+  const title = document.getElementById("title");
+
+  firstButton.addEventListener("click", function () {
+    console.log("Hello World!");
+    title.innerText = "My notebook";
+  });
+}
