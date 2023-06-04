@@ -192,6 +192,13 @@ function initializeCode() {
     console.log("Hello World!");
     title.innerText = "My notebook";
   });
+  var addButton = document.getElementById("add-data");
+  var dataList = document.getElementById("data-list");
+  addButton.addEventListener("click", function () {
+    var li = document.createElement("li");
+    li.textContent = "Arbitrary text";
+    dataList.appendChild(li);
+  });
 }
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -218,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41797" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45707" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
